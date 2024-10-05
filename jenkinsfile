@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/joyuwaoma/vue-app-jenkins.git' 
+                git 'https://github.com/joyuwaoma/vue-app-jenkins' 
         }
 
         stage('Build') {
