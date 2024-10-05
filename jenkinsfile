@@ -8,18 +8,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/joyuwaoma/vue-app-jenkins' 
+                git 'https://github.com/joyuwaoma/vue-app-jenkins.git' // Replace with your actual URL
+            }
         }
 
         stage('Build') {
             steps {
-                sh 'echo "Building the web app..."' 
+                sh 'echo "Building the web app..."' // For this basic example, just an echo
             }
         }
 
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying to the web server..."'
+                // Add commands to copy files to your web server directory
             }
         }
     }
