@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM '*/5 * * * *'
+        pollSCM '* * * * *'
     }
 
     stages {
@@ -15,12 +15,16 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Building the web app..."' // For this basic example, just an echo
+                cd vue-app-jenkins
+                npm install
+                npm run build
             }
         }
 
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying to the web server..."'
+                npm run dev
                 // Add commands to copy files to your web server directory
             }
         }
