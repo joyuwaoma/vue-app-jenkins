@@ -17,14 +17,14 @@ pipeline {
                 sh 'echo "Building the web app..."' // For this basic example, just an echo
                 cd vue-app-jenkins
                 npm install
-                npm run build
+                npm run dev
             }
         }
 
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying to the web server..."'
-                npm run dev
+                npm run build
                 // Add commands to copy files to your web server directory
             }
         }
