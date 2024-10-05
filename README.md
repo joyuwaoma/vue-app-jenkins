@@ -32,5 +32,14 @@ Just use this command to be sure it is there
 
 > docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
 
+## Connect to Jenkins
+
+> https://localhost:8080/
+
+## Where I got some Infomation
+
+> https://www.jenkins.io/doc/book/installing/docker/#customizing-jenkins-with-plugins
+> https://www.jenkins.io/doc/book/pipeline/
+
 
 
