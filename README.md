@@ -28,5 +28,9 @@ Just use this command to be sure it is there
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:2.462.3-1
 
+## Get the password
+
+> docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+
 
 

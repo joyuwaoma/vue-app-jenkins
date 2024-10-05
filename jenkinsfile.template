@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'YOUR_GIT_REPOSITORY_URL' // Replace with your actual URL
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo "Building the web app..."' // For this basic example, just an echo
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying to the web server..."'
+                // Add commands to copy files to your web server directory
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    triggers {
+        pollSCM '*/5 * * * *'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/joyuwaoma/vue-app-jenkins.git' 
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo "Building the web app..."' 
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying to the web server..."'
+            }
+        }
+    }
+}
